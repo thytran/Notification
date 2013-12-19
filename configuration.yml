@@ -1,0 +1,32 @@
+#server
+http:
+  port 8080
+  adminport 8081
+
+# mysql database configuration
+database:
+  # JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+  #username
+  user: thytran
+  #password
+  password: Th99tr99
+  # the JDBC URL
+  url:jdbc:mysql://127.0.0.1:3306/test
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+  # the SQL query to run when validating a connection's liveness
+  validationQuery:
+  # the minimum number of connections to keep open
+  minSize: 8
+  # the maximum number of connections to keep open
+  maxSize: 32
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+  # how long a connection must be held before it can be validated
+  checkConnectionHealthWhenIdleFor: 10s
+  # the maximum lifetime of an idle connection
+  closeConnectionIfIdleFor: 1 minute
